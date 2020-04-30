@@ -19,5 +19,5 @@ class Config(object):
     LANGUAGES = ['en', 'es']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     POSTS_PER_PAGE = 25
-    ELASTICSEARCH_URL = "https://paas:701f5cf7f71702bd636f439258745b44@oin-us-east-1.searchly.com"
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
