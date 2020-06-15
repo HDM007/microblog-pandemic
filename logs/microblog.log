@@ -1,4 +1,4 @@
-2020-04-05 01:56:54,337 ERROR: Exception on /search [GET] [in /Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+2020-06-09 15:53:48,602 ERROR: Exception on /search [GET] [in /Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -31,34 +31,22 @@ Traceback (most recent call last):
   File "/Users/harry/microblog/venv/lib/python3.7/site-packages/elasticsearch/connection/base.py", line 244, in _raise_error
     status_code, error_message, additional_info
 elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
-2020-04-05 01:59:10,655 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 02:01:00,559 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 04:55:19,011 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 04:55:19,011 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 04:55:19,011 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 04:55:19,014 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 06:18:00,640 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 06:18:01,346 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 06:18:02,200 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-04-05 06:35:30,812 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-06-06 19:08:03,328 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-06-06 19:10:09,953 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-06-06 19:20:43,999 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-06-06 19:21:37,039 ERROR: Exception on /search [GET] [in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py:1891]
+2020-06-09 15:56:36,229 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
+2020-06-09 15:56:45,321 ERROR: Exception on /search [GET] [in /Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
   File "/Users/harry/microblog/app/main/routes.py", line 143, in search
     current_app.config['POSTS_PER_PAGE'])
@@ -66,16 +54,20 @@ Traceback (most recent call last):
     ids, total = query_index(cls.__tablename__, expression, page, per_page)
   File "/Users/harry/microblog/app/search.py", line 25, in query_index
     'from': (page - 1) * per_page, 'size': per_page})
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/elasticsearch/client/utils.py", line 92, in _wrapped
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/elasticsearch/client/utils.py", line 92, in _wrapped
     return func(*args, params=params, headers=headers, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/elasticsearch/client/__init__.py", line 1627, in search
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/elasticsearch/client/__init__.py", line 1627, in search
     body=body,
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/elasticsearch/transport.py", line 362, in perform_request
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/elasticsearch/transport.py", line 362, in perform_request
     timeout=timeout,
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 248, in perform_request
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 248, in perform_request
     self._raise_error(response.status, raw_data)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/elasticsearch/connection/base.py", line 244, in _raise_error
+  File "/Users/harry/microblog/venv/lib/python3.7/site-packages/elasticsearch/connection/base.py", line 244, in _raise_error
     status_code, error_message, additional_info
 elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
-2020-06-06 19:38:04,772 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
-2020-06-06 19:38:54,758 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
+2020-06-09 15:58:32,525 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
+2020-06-09 16:00:09,987 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
+2020-06-09 16:02:01,016 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:77]
+2020-06-09 16:59:46,604 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:78]
+2020-06-09 17:02:56,358 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:78]
+2020-06-09 17:03:12,306 INFO: Microblog startup [in /Users/harry/microblog/app/__init__.py:78]

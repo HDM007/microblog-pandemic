@@ -1,0 +1,3 @@
+FLASK_APP=microblog.py
+ELASTICSEARCH_URL=http://localhost:9200
+MS_TRANSLATOR_KEY=f5ea281e97b240929b3e27cca9faf855
